@@ -43,3 +43,7 @@ yarn dev
 in your browser.
 
 Note: Frontend communicates with the backend at http://localhost:3001.
+
+## Flow
+
+User registers → Frontend calls /auth/register → Backend stores user → Redirect to login → Frontend calls /auth/login → Backend returns fake JWT → Redirect to /welcome → Welcome message displayed
