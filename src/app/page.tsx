@@ -7,7 +7,7 @@ import { motion } from 'framer-motion'
 
 const HomePage: React.FC = () => {
   return (
-    <div className="min-h-screen flex flex-col justify-center items-center bg-slate-100 px-5 text-center">
+    <div className="min-h-screen flex flex-col justify-center items-center bg-linear-to-bl from-violet-500 to-fuchsia-500 px-5 text-center">
       <motion.h1
         initial={{ y: -20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
@@ -31,9 +31,9 @@ const HomePage: React.FC = () => {
         animate={{ scale: 1, opacity: 1 }}
         transition={{ duration: 0.5, delay: 0.6 }}
       >
-        <Link href="/login">
+        <Link href="/register">
           <Button variant="default" className="px-6 py-3">
-            Go to Login Page
+            Go to Signup Page
           </Button>
         </Link>
       </motion.div>

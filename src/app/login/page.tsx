@@ -44,7 +44,7 @@ const LoginPage: React.FC = () => {
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-slate-100 px-5">
+    <div className="min-h-screen flex items-center justify-center bg-linear-to-bl from-violet-500 to-fuchsia-500 px-5">
       <motion.form
         onSubmit={handleLogin}
         initial={{ opacity: 0, y: -20 }}
@@ -67,7 +67,7 @@ const LoginPage: React.FC = () => {
           required
           value={email}
           onChange={(e: React.ChangeEvent<HTMLInputElement>) => setEmail(e.target.value)}
-          className="border border-slate-300 p-3 mb-4 rounded placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
+          className="border border-slate-300 p-3 mb-4 rounded placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-violet-500 transition"
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.3 }}
@@ -79,7 +79,7 @@ const LoginPage: React.FC = () => {
           required
           value={password}
           onChange={(e: React.ChangeEvent<HTMLInputElement>) => setPassword(e.target.value)}
-          className="border border-slate-300 p-3 mb-6 rounded placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
+          className="border border-slate-300 p-3 mb-6 rounded placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-violet-500 transition"
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.4 }}
@@ -94,7 +94,7 @@ const LoginPage: React.FC = () => {
             type="submit"
             variant="default"
             className={`w-full p-3 rounded-lg text-white ${
-              loading ? 'bg-blue-400 cursor-not-allowed' : 'bg-blue-500 hover:bg-blue-600'
+              loading ? 'bg-violet-400 cursor-not-allowed' : 'bg-violet-500 hover:bg-violet-600'
             }`}
           >
             {loading ? 'Logging in...' : 'Login'}
@@ -110,7 +110,7 @@ const LoginPage: React.FC = () => {
           className="text-sm text-center mt-6 text-slate-600"
         >
           Don't have an account?{' '}
-          <a href="/register" className="text-blue-500 underline hover:text-blue-600">
+          <a href="/register" className="text-violet-500 underline hover:text-violet-600">
             Sign Up
           </a>
         </motion.p>

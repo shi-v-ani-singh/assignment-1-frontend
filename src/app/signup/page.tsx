@@ -9,7 +9,7 @@ interface RegistrationResponse {
   message?: string
 }
 
-const RegisterPage: React.FC = () => {
+const SignupPage: React.FC = () => {
   const [firstName, setFirstName] = useState<string>("")
   const [lastName, setLastName] = useState<string>("")
   const [email, setEmail] = useState<string>("")
@@ -48,7 +48,7 @@ const RegisterPage: React.FC = () => {
   }
 
   return (
-    <div className="min-h-screen flex justify-center items-center bg-slate-100 px-5">
+    <div className="min-h-screen flex justify-center items-center bg-linear-to-bl from-violet-500 to-fuchsia-500 px-5">
       <motion.form
         onSubmit={handleRegister}
         initial={{ opacity: 0, y: -20 }}
@@ -71,7 +71,7 @@ const RegisterPage: React.FC = () => {
           required
           value={firstName}
           onChange={(e: React.ChangeEvent<HTMLInputElement>) => setFirstName(e.target.value)}
-          className="border border-slate-300 p-3 mb-4 rounded placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
+          className="border border-slate-300 p-3 mb-4 rounded placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-violet-500 transition"
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.3 }}
@@ -83,7 +83,7 @@ const RegisterPage: React.FC = () => {
           required
           value={lastName}
           onChange={(e: React.ChangeEvent<HTMLInputElement>) => setLastName(e.target.value)}
-          className="border border-slate-300 p-3 mb-4 rounded placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
+          className="border border-slate-300 p-3 mb-4 rounded placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-violet-500 transition"
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.4 }}
@@ -95,7 +95,7 @@ const RegisterPage: React.FC = () => {
           required
           value={email}
           onChange={(e: React.ChangeEvent<HTMLInputElement>) => setEmail(e.target.value)}
-          className="border border-slate-300 p-3 mb-4 rounded placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
+          className="border border-slate-300 p-3 mb-4 rounded placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-violet-500 transition"
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.5 }}
@@ -107,7 +107,7 @@ const RegisterPage: React.FC = () => {
           required
           value={password}
           onChange={(e: React.ChangeEvent<HTMLInputElement>) => setPassword(e.target.value)}
-          className="border border-slate-300 p-3 mb-6 rounded placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
+          className="border border-slate-300 p-3 mb-6 rounded placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-violet-500 transition"
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.6 }}
@@ -122,7 +122,7 @@ const RegisterPage: React.FC = () => {
             type="submit"
             variant="default"
             className={`w-full p-3 rounded-lg text-white ${
-              loading ? 'bg-blue-400 cursor-not-allowed' : 'bg-blue-500 hover:bg-blue-600'
+              loading ? 'bg-violet-400 cursor-not-allowed' : 'bg-violet-500 hover:bg-violet-600'
             }`}
           >
             {loading ? 'Creating Account...' : 'Create Account'}
@@ -134,7 +134,7 @@ const RegisterPage: React.FC = () => {
 
         <p className="text-sm text-center mt-6 text-slate-600">
           Already have an account?{' '}
-          <a href="/login" className="text-blue-500 underline hover:text-blue-600">
+          <a href="/login" className="text-violet-500 underline hover:text-violet-600">
             Login
           </a>
         </p>
@@ -143,4 +143,4 @@ const RegisterPage: React.FC = () => {
   )
 }
 
-export default RegisterPage
+export default SignupPage
