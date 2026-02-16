@@ -31,8 +31,8 @@ const HomePage: React.FC = () => {
         animate={{ scale: 1, opacity: 1 }}
         transition={{ duration: 0.5, delay: 0.6 }}
       >
-        <Link href="/register">
-          <Button variant="default" className="px-6 py-3">
+        <Link href="/signup">
+          <Button className="px-6 py-3">
             Go to Signup Page
           </Button>
         </Link>
